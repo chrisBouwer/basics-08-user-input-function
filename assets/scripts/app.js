@@ -27,6 +27,7 @@ function add() {
     number: enteredNum,
     newResutl: currentResult,
   };
+  console.log(logEntry.operation);
   log(logEntry);
 }
 
@@ -41,6 +42,7 @@ function subtract() {
     number: enteredNum,
     newResutl: currentResult,
   };
+  console.log(logEntry.operation);
   log(logEntry);
 }
 
@@ -55,6 +57,7 @@ function multiply() {
     number: enteredNum,
     newResutl: currentResult,
   };
+  console.log(logEntry.operation);
   log(logEntry);
 }
 
@@ -69,6 +72,7 @@ function divide() {
     number: enteredNum,
     newResutl: currentResult,
   };
+  console.log(logEntry.operation);
   log(logEntry);
 }
 
