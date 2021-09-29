@@ -20,21 +20,21 @@ function add() {
 function subtract() {
   const enteredNum = getUserNumberInput();
   const initialResult = currentResult;
-  currentResult = currentResult - enteredNum;
+  currentResult -= enteredNum;
   displayEquation(initialResult, '-', enteredNum);
 }
 
 function multiply() {
   const enteredNum = getUserNumberInput();
   const initialResult = currentResult;
-  currentResult = currentResult * enteredNum;
+  currentResult *= enteredNum;
   displayEquation(initialResult, 'x', enteredNum);
 }
 
 function divide() {
   const enteredNum = getUserNumberInput();
   const initialResult = currentResult;
-  currentResult = currentResult / enteredNum;
+  currentResult /= enteredNum;
   displayEquation(initialResult, '÷', enteredNum);
 }
 
