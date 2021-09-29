@@ -11,7 +11,13 @@ function displayEquation(startNumb, symbol, enteredNum) {
   outputResult(currentResult, calcDescription);
 }
 
-function log(logEntry) {
+function log(operatorIdentier, prevResult, operationNum, newResult) {
+  const logEntry = {
+    operation: operatorIdentier,
+    prevResult: prevResult,
+    number: operationNum,
+    newResult: newResult,
+  };
   logEntries.push(logEntry);
   console.log(logEntries);
 }
@@ -21,14 +27,7 @@ function add() {
   const initialResult = currentResult;
   currentResult += enteredNum;
   displayEquation(initialResult, '-', enteredNum);
-  const logEntry = {
-    operation: 'ADD',
-    prevResult: initialResult,
-    number: enteredNum,
-    newResutl: currentResult,
-  };
-  console.log(logEntry.operation);
-  log(logEntry);
+  log('ADD', initialResult, enteredNum, currentResult);
 }
 
 function subtract() {
@@ -36,14 +35,7 @@ function subtract() {
   const initialResult = currentResult;
   currentResult -= enteredNum;
   displayEquation(initialResult, '-', enteredNum);
-  const logEntry = {
-    operation: 'SUBTRACT',
-    prevResult: initialResult,
-    number: enteredNum,
-    newResutl: currentResult,
-  };
-  console.log(logEntry.operation);
-  log(logEntry);
+  log('SUBTRACT', initialResult, enteredNum, currentResult);
 }
 
 function multiply() {
@@ -51,14 +43,7 @@ function multiply() {
   const initialResult = currentResult;
   currentResult *= enteredNum;
   displayEquation(initialResult, 'x', enteredNum);
-  const logEntry = {
-    operation: 'MULTIPLY',
-    prevResult: initialResult,
-    number: enteredNum,
-    newResutl: currentResult,
-  };
-  console.log(logEntry.operation);
-  log(logEntry);
+  log('MULTIPLY', initialResult, enteredNum, currentResult);
 }
 
 function divide() {
@@ -66,14 +51,7 @@ function divide() {
   const initialResult = currentResult;
   currentResult /= enteredNum;
   displayEquation(initialResult, '÷', enteredNum);
-  const logEntry = {
-    operation: 'DIVIDE',
-    prevResult: initialResult,
-    number: enteredNum,
-    newResutl: currentResult,
-  };
-  console.log(logEntry.operation);
-  log(logEntry);
+  log('DIVIDE', initialResult, enteredNum, currentResult);
 }
 
 addBtn.addEventListener('click', add);
